@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,200&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <ul class="nav-list">
+            <li><a href=#welcome-section>About</a></li>
+            <li><a href=#projects>Projects</a></li>
+            <li><a href=#contacts>Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- WELCOME SECTION -->
+    <section id="welcome-section">
+        <h1>Hey! I am Aldo</h1>
+        <p>a Python with Django Back-End Developer</p>
+
+        <div id="quick-contact">
+            <a href='https://www.linkedin.com/in/aldo-telese/' target="_blank" class="button contact-details">
+                <i class="fa fa-linkedin"></i></a>
+            <a href='https://github.com/aldotele' target="_blank" class="button contact-details" id="profile-link">
+                <i class="fa fa-github"></i></a>
+        </div>
+    </section>
+
+    <div id="separator"></div>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects">
+        <h2 class="projects-header">These are some of my projects</h2>
+        <div class="projects-grid">
+            <a class="project-tile" href="https://tdtranslator.herokuapp.com/" target="_blank">
+                <h4 class="project-title">TD Translator</h4>
+                <img class="project-image" src="{% static 'assets/td-translator-img.JPG' %}" alt="project">
+                <p class="project-work">Django - HTML - CSS - JavaScript</p>
+            </a>
+
+            <a class="project-tile" href="https://themysteryword.herokuapp.com/" target="_blank">
+                <h4 class="project-title">The Mystery Word</h4>
+                <img class="project-image" src="{% static 'assets/the-mystery-word-img.JPG' %}" alt="project">
+                <p class="project-work">Django - Bootstrap - JavaScript</p>
+            </a>
+
+            <a class="project-tile" href="http://short.devoping.com/" target="_blank">
+                <h4 class="project-title">Shorten 1000 Url shortener</h4>
+                <img class="project-image" src="{% static 'assets/shorten-1000-img.JPG' %}" alt="project">
+                <p class="project-work">Django - Bootstrap - JavaScript</p>
+            </a>
+
+            <a id="hidden-tile-1" style="display:none" class="project-tile" href="https://gracious-mcclintock-220460.netlify.app/index.html" target="_blank">
+                <h4 class="project-title">Image Recognition WebApp</h4>
+                <img class="project-image" src="{% static 'assets/image-recognition-img.JPG' %}" alt="project">
+                <p class="project-work">Django - HTML - CSS - JavaScript</p>
+            </a>
+
+            <a id="hidden-tile-2" style="display:none" class="project-tile" href="https://browsergameteam2.netlify.app/" target="_blank">
+                <h4 class="project-title">Space War Browser Game</h4>
+                <img class="project-image" src="{% static 'assets/td-space-war-img.JPG' %}" alt="project">
+                <p class="project-work">Django - HTML - CSS - JavaScript</p>
+            </a>
+
+            <a id="hidden-tile-3" style="display:none" class="project-tile" href="https://github.com/aldotele/url_ping" target="_blank">
+                <h4 class="project-title">URL Ping</h4>
+                <img class="project-image" src="{% static 'assets/url-ping-img.JPG' %}" alt="project">
+                <p class="project-work">Django - Bootstrap</p>
+            </a>
+
+            <a id="hidden-tile-4" style="display:none" class="project-tile" href="https://github.com/aldotele/lotto_lottery/tree/learning_path_3_unittest" target="_blank">
+                <h4 class="project-title">Lotto Lottery</h4>
+                <img class="project-image" src="{% static 'assets/lotto-game-img.JPG' %}" alt="project">
+                <p class="project-work">Python</p>
+            </a>
+
+            <a id="hidden-tile-5" style="display:none" class="project-tile" href="https://github.com/aldotele/rock_paper_scissors" target="_blank">
+                <h4 class="project-title">Rock Paper Scissors</h4>
+                <img class="project-image" src="{% static 'assets/rock-paper-scissors-img.JPG' %}" alt="project">
+                <p class="project-work">Python</p>
+            </a>
+
+            <a id="hidden-tile-6" style="display:none" class="project-tile" href="https://www.martelsrl.com" target="_blank">
+                <h4 class="project-title">Food-Export Company</h4>
+                <img class="project-image" src="{% static 'assets/martelsrl-img.JPG' %}" alt="project">
+                <p class="project-work">CMS Squarespace</p>
+            </a>
+
+            <a id="hidden-tile-7" style="display:none" class="project-tile" href="https://github.com/aldotele/numpy_tic-tac-toe" target="_blank">
+                <h4 class="project-title">Tic Tac Toe</h4>
+                <img class="project-image" src="{% static 'assets/tic-tac-toe-img.JPG' %}" alt="project">
+                <p class="project-work">Python - Numpy</p>
+            </a>
+
+            <a id="hidden-tile-8" style="display:none" class="project-tile" href="https://engdoc.netlify.app/" target="_blank">
+                <h4 class="project-title">Technical Documentation</h4>
+                <img class="project-image" src="{% static 'assets/tech-documentation-img.JPG' %}" alt="project">
+                <p class="project-work">HTML5 & CSS3</p>
+            </a>
+
+            <a id="hidden-tile-9" style="display:none" class="project-tile" href="https://english-course-survey.netlify.app/" target="_blank">
+                <h4 class="project-title">Survey Form</h4>
+                <img class="project-image" src="resources/assets/survey-form-img.JPG" alt="project">
+                <p class="project-work">HTML5 & CSS3</p>
+            </a>
+
+
+        </div>
+
+        <div id="more-btn" onclick="">
+            See More
+        </div>
+
+        <div id="more-github-btn" style="display:none" onclick="">
+            All projects on Github
+        </div>
+
+    </section>
+
+    <div id="separator"></div>
+
+    <!-- CONTACT SECTION -->
+    <section id="contacts">
+        <h1>Let's Get in Touch...</h1>
+        <p>What are you up to?</p>
+        <div id="contact-links">
+            <a href='https://www.linkedin.com/in/aldo-telese/' target="_blank" class="button contact-details">
+                <i class="fa fa-linkedin"></i> LinkedIn
+            </a>
+            <a href='https://github.com/aldotele' target="_blank" class="button contact-details" id="profile-link">
+                <i class="fa fa-github"></i> Github
+            </a>
+            <a href='mailto:aldo.telese@hotmail.it' target="_blank" class="button contact-details">
+                <i class="fa fa-at"></i> E-mail
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER  -->
+    <footer>
+        <p>This is my portfolio. All contact details refer exclusively to my person.</p>
+        <p>© Copyright 2021</p>
+    </footer>
+
+    <script>
+        // see more project event
+        document.getElementById('more-btn').onclick = function () {
+            document.getElementById('hidden-tile-1').style.display = "block";
+            document.getElementById('hidden-tile-2').style.display = "block";
+            document.getElementById('hidden-tile-3').style.display = "block";
+            document.getElementById('hidden-tile-4').style.display = "block";
+            document.getElementById('hidden-tile-5').style.display = "block";
+            document.getElementById('hidden-tile-6').style.display = "block";
+            // document.getElementById('hidden-tile-7').style.display = "block";
+            // document.getElementById('hidden-tile-8').style.display = "block";
+            // document.getElementById('hidden-tile-9').style.display = "block";
+
+
+            document.getElementById('more-btn').style.display = "none";
+            document.getElementById('more-github-btn').style.display = "block";
+
+        // github redirect event
+        document.getElementById('more-github-btn').onclick = function () {
+            let a= document.createElement('a');
+            a.target= '_blank';
+            a.href= 'https://github.com/aldotele?tab=repositories';
+            a.click();
+        }
+    };;
+    </script>
+
+</body>
+</html>

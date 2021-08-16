@@ -252,6 +252,7 @@ p.project-work {
     transition-property: color;
     transition-duration: 0.3s;
     transition-timing-function: linear;
+    padding: 10px;
 }
 
 #contact-links > a:hover {

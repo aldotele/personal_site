@@ -72,7 +72,7 @@ h1, h2 {
     font-size: 3rem;
     margin-bottom: 10px;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 30px;
 }
 
 #welcome-section > p {
@@ -240,6 +240,7 @@ p.project-work {
 #contact-links {
     margin-top: 10px;
     margin-bottom: 10px;
+    padding-bottom: 10px;
 }
 
 #contact-links > a {

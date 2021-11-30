@@ -35,6 +35,16 @@
         <div id="moreme-btn" onclick="">
             More About me
         </div>
+
+        <div id="moreme-content" style="display:none;font-size:20px">
+            <p class="moreme-fact">I like foreign things: languages, ethnic food, world music</p>
+            <p class="moreme-fact">The only music I can listen to while programming is Lo-Fi</p>
+            <p class="moreme-fact">I like American coffee (don't tell people, I am from the land of espresso)</p>
+            <p class="moreme-fact">I've eaten so many frozen pizzas in my life (again, keep it quiet,
+            as I am from the land of pizza as well)</p>
+            <p class="moreme-fact">I graduated in Economics, which has nothing to do with programming</p>
+            <p class="moreme-fact">I wrote my first line of code at 25</p>
+        </div>
     </section>
 
     <div id="separator"></div>
@@ -153,6 +163,11 @@
     </footer>
 
     <script>
+        // more about me event
+        document.getElementById('moreme-btn').onclick = function () {
+            document.getElementById('moreme-content').style.display = "block";
+        }
+
         // see more project event
         document.getElementById('more-btn').onclick = function () {
             document.getElementById('hidden-tile-1').style.display = "block";

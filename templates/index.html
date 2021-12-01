@@ -31,13 +31,28 @@
             <a href='https://github.com/aldotele' target="_blank" class="button contact-details" id="profile-link">
                 <i class="fa fa-github"></i></a>
         </div>
+
+        <div id="moreme-btn" onclick="">More About me</div>
+
+        <div id="moreme-content" style="display:none;">
+            <p class="moreme-fact">I like foreign things: languages, ethnic food,
+                <a class="aboutme-link" href="https://open.spotify.com/playlist/0q6c4fBoe3XFqkPgHo01KT?si=0162008028a84bb4">world music</a></p>
+            <p class="moreme-fact">The only music I can listen to while programming is
+                <a class="aboutme-link" href="https://www.youtube.com/watch?v=5qap5aO4i9A&ab_channel=LofiGirl">Lo-Fi</a></p>
+            <p class="moreme-fact">I like American coffee, but please don't tell people (I am from the land of espresso)</p>
+            <p class="moreme-fact">I've eaten lots of frozen pizzas in my life (again, keep it quiet,
+            as I am from the land of pizza as well)</p>
+            <p class="moreme-fact">My real name is Renato, but I'm known to everyone as Aldo</p>
+            <p class="moreme-fact">I graduated in Economics, which has nothing to do with programming</p>
+            <p class="moreme-fact">I wrote my first line of code at 25</p>
+        </div>
     </section>
 
     <div id="separator"></div>
 
     <!-- PROJECTS SECTION -->
     <section id="projects">
-        <h2 class="projects-header">These are some of my projects</h2>
+        <h2 class="projects-header">Some of my projects</h2>
         <div class="projects-grid">
             <a class="project-tile" href="https://tdtranslator.herokuapp.com/" target="_blank">
                 <h4 class="project-title">TD Translator</h4>
@@ -149,6 +164,20 @@
     </footer>
 
     <script>
+        // more about me event
+        document.getElementById('moreme-btn').onclick = function () {
+        let moremeBtnText = document.getElementById('moreme-btn').innerHTML;
+            if (moremeBtnText == "More About me") {
+                //document.getElementById('welcome-section').style.height = 50vh;  // NOT WORKING
+                document.getElementById('moreme-content').style.display = "block";
+                document.getElementById('moreme-btn').innerHTML = "Close this";
+            }
+            if (moremeBtnText == "Close this") {
+                document.getElementById('moreme-content').style.display = "none";
+                document.getElementById('moreme-btn').innerHTML = "More About me";
+              }
+        }
+
         // see more project event
         document.getElementById('more-btn').onclick = function () {
             document.getElementById('hidden-tile-1').style.display = "block";

@@ -98,6 +98,10 @@ h1, h2 {
     background-color: white;
 }
 
+.aboutme-link:hover {
+    color: white;
+}
+
 #quick-contact {
     font-size: 2.6rem;
 }
@@ -114,7 +118,6 @@ h1, h2 {
 }
 
 #quick-contact > a:hover {
-    bottom: 5px;
     color:#212529;
 }
 

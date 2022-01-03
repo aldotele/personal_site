@@ -11,12 +11,15 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="{% static 'assets/browser-fav.jpg' %}">
     <link rel="manifest" href="/manifest.json">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 </head>
 
-<body>
+<body onload="typeWriter()">
     <nav id="navbar">
         <ul class="nav-list">
             <li><a href=#welcome-section>About</a></li>
@@ -28,28 +31,42 @@
     <!-- WELCOME SECTION -->
     <section id="welcome-section">
         <h1>Hey! I am Aldo</h1>
-        <p>a Python with Django Back-End Developer</p>
+        <p id="profile-title"></p>
 
-        <div id="quick-contact">
+        <div id="at-work" style="display: flex; visibility: hidden;">
+            <p style="margin-bottom: 30px;" class="profile-subtitle">Working with </p>
+            <i style="font-size: 3rem; margin-right: 10px; margin-left: 10px;" class="devicon-java-plain-wordmark"></i>
+            <i style="font-size: 3rem" class="devicon-spring-plain-wordmark colored"></i>
+        </div>
+
+        <div id="side" style="display: flex; visibility: hidden;">
+            <p class="profile-subtitle">Doing side-projects in </p>
+            <i style="font-size: 3rem; margin-right: 10px; margin-left: 10px;" class="devicon-python-plain-wordmark colored"></i>
+            <i style="font-size: 3rem" class="devicon-django-plain colored"></i>
+        </div>
+
+
+
+        <div style="margin-top: 30px;" id="quick-contact">
             <a href='https://www.linkedin.com/in/aldo-telese/' target="_blank" class="button contact-details">
                 <i class="fa fa-linkedin"></i></a>
             <a href='https://github.com/aldotele' target="_blank" class="button contact-details" id="profile-link">
                 <i class="fa fa-github"></i></a>
         </div>
 
-        <div id="moreme-btn" onclick="">More About me</div>
+        <div id="moreme-btn" onclick="">Random Fact</div>
 
-        <div id="moreme-content" style="display:none;">
-            <p class="moreme-fact">I like foreign things: languages, ethnic food,
+        <div id="moreme-content">
+            <p class="moreme-fact" id="fact1" style="display:none">I like foreign things: languages, ethnic food,
                 <a class="aboutme-link" href="https://open.spotify.com/playlist/0q6c4fBoe3XFqkPgHo01KT?si=0162008028a84bb4">world music</a></p>
-            <p class="moreme-fact">The only music I can listen to while programming is
+            <p class="moreme-fact" id="fact2" style="display:none">The only music I can listen to while programming is
                 <a class="aboutme-link" href="https://www.youtube.com/watch?v=5qap5aO4i9A&ab_channel=LofiGirl">Lo-Fi</a></p>
-            <p class="moreme-fact">I like American coffee, but please don't tell people (I am from the land of espresso)</p>
-            <p class="moreme-fact">I've eaten lots of frozen pizzas in my life (again, keep it quiet,
+            <p class="moreme-fact" id="fact3" style="display:none">I like American coffee, but please don't tell people (I am from the land of espresso)</p>
+            <p class="moreme-fact" id="fact4" style="display:none">I've eaten lots of frozen pizzas in my life (again, keep it quiet,
             as I am from the land of pizza as well)</p>
-            <p class="moreme-fact">My real name is Renato, but I'm known to everyone as Aldo</p>
-            <p class="moreme-fact">I graduated in Economics, which has nothing to do with programming</p>
-            <p class="moreme-fact">I wrote my first line of code at 25</p>
+            <p class="moreme-fact" id="fact5" style="display:none">My real name is Renato, but I'm known to everyone as Aldo</p>
+            <p class="moreme-fact" id="fact6" style="display:none">I graduated in Economics, which has nothing to do with programming</p>
+            <p class="moreme-fact" id="fact7" style="display:none">I wrote my first line of code at 25</p>
         </div>
     </section>
 
@@ -59,15 +76,10 @@
     <section id="projects">
         <h2 class="projects-header">Some of my projects</h2>
         <div class="projects-grid">
-            <a class="project-tile" href="https://tdtranslator.herokuapp.com/" target="_blank">
-                <h4 class="project-title">TD Translator</h4>
-                <img class="project-image" src="{% static 'assets/td-translator-small-img.JPG' %}" alt="project">
-                <p class="project-work">Django - HTML - CSS - JavaScript</p>
-            </a>
 
             <a class="project-tile" href="https://themysteryword.herokuapp.com/" target="_blank">
                 <h4 class="project-title">The Mystery Word</h4>
-                <img class="project-image" src="{% static 'assets/the-mystery-word-small-img.JPG' %}" alt="project">
+                <img class="project-image" src="{% static 'assets/the-mystery-word-square-img.JPG' %}" alt="project">
                 <p class="project-work">Django - Bootstrap - JavaScript</p>
             </a>
 
@@ -75,6 +87,12 @@
                 <h4 class="project-title">API Ping</h4>
                 <img class="project-image" src="{% static 'assets/pingem-small-img.JPG' %}" alt="project">
                 <p class="project-work">Django - Bootstrap</p>
+            </a>
+
+            <a class="project-tile" href="https://tdtranslator.herokuapp.com/" target="_blank">
+                <h4 class="project-title">TD Translator</h4>
+                <img class="project-image" src="{% static 'assets/td-translator-small-img.JPG' %}" alt="project">
+                <p class="project-work">Django - HTML - CSS - JavaScript</p>
             </a>
 
             <a id="hidden-tile-1" style="display:none" class="project-tile" href="https://gracious-mcclintock-220460.netlify.app/index.html" target="_blank">
@@ -164,24 +182,50 @@
 
     <!-- FOOTER  -->
     <footer>
-        <p>This is my portfolio. All contact details refer exclusively to my person.</p>
-        <p>© Copyright 2021</p>
+        <p style="text-align:center;margin: 30px auto;">aldotelesedev | © Copyright 2022</p>
     </footer>
 
     <script>
-        // more about me event
-        document.getElementById('moreme-btn').onclick = function () {
-        let moremeBtnText = document.getElementById('moreme-btn').innerHTML;
-            if (moremeBtnText == "More About me") {
-                //document.getElementById('welcome-section').style.height = 50vh;  // NOT WORKING
-                document.getElementById('moreme-content').style.display = "block";
-                document.getElementById('moreme-btn').innerHTML = "Close this";
-            }
-            if (moremeBtnText == "Close this") {
-                document.getElementById('moreme-content').style.display = "none";
-                document.getElementById('moreme-btn').innerHTML = "More About me";
-              }
+        // profile title typewriter & stack
+        var i = 0;
+        var title = 'a jr Software Developer';
+        var speed = 30; /* speed/duration of the effect in milliseconds */
+
+        function typeWriter() {
+          if (i < title.length) {
+            document.getElementById("profile-title").innerHTML += title.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+          }
+          showStack();
         }
+
+        function showStack() {
+            setTimeout(
+                function() {
+                    document.getElementById("at-work").style.visibility = "visible";
+                }, 1000);
+
+            setTimeout(
+                function() {
+                    document.getElementById("side").style.visibility = "visible";
+                }, 2000);
+        }
+
+        // random facts
+        var facts = document.getElementsByClassName("moreme-fact");
+        document.getElementById("moreme-btn").addEventListener("click", function(event) {
+            if (document.getElementById("moreme-btn").innerHTML == "Random Fact") {
+                document.getElementById("moreme-btn").innerHTML = "Generate New";
+            }
+            var random = Math.floor(Math.random() * facts.length);
+
+            Array.prototype.forEach.call(facts, function(fact) {
+                fact.style.display = "none";
+            });
+
+            facts[random].style.display = "block";
+        });
 
         // see more project event
         document.getElementById('more-btn').onclick = function () {

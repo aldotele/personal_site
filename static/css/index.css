@@ -76,13 +76,22 @@ h1, h2 {
     padding-top: 30px;
 }
 
-#welcome-section > p {
+#profile-title {
     font-weight: 500;
     /* font-style: italic; */
     font-size: 2rem;
     color: #212529;
     margin: 20px;
     border-bottom: 1px solid white;
+}
+
+.profile-subtitle {
+    font-weight: 400;
+    //font-style: italic;
+    font-size: 1rem;
+    color: #212529;
+    margin: 10px;
+    border-bottom: 1px solid black;
 }
 
 #moreme-btn {
@@ -287,7 +296,7 @@ p.project-work {
 }
 
 #contact-links > a:hover {
-    // bottom: 5px;
+    /* bottom: 5px; */
     color:#212529;
 }
 

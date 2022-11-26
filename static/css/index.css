@@ -54,12 +54,13 @@ ul.nav-list {
 
 #welcome-section {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #0d6efd;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 30px;
 }
 
 h1, h2 {
@@ -75,13 +76,50 @@ h1, h2 {
     padding-top: 30px;
 }
 
-#welcome-section > p {
+#profile-title {
     font-weight: 500;
     /* font-style: italic; */
     font-size: 2rem;
     color: #212529;
     margin: 20px;
     border-bottom: 1px solid white;
+}
+
+.profile-subtitle {
+    font-weight: 400;
+    //font-style: italic;
+    font-size: 1rem;
+    color: #212529;
+    margin: 10px;
+    border-bottom: 1px solid black;
+}
+
+#moreme-btn {
+    color:#212529;
+    border: 2px solid #212529;
+    margin-top:50px;
+    width: 150px;
+    font-size:18px;
+    padding:10px;
+}
+
+#moreme-btn:hover {
+    cursor:pointer;
+    background-color: white;
+}
+
+#moreme-content {
+    font-size: 20px;
+    padding: 20px;
+}
+
+.aboutme-link {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.aboutme-link:hover {
+    color: black;
 }
 
 #quick-contact {
@@ -100,7 +138,6 @@ h1, h2 {
 }
 
 #quick-contact > a:hover {
-    bottom: 5px;
     color:#212529;
 }
 
@@ -121,7 +158,7 @@ h1, h2 {
 h2.projects-header {
     max-width: 640px;
     margin: 0 auto 6rem auto;
-    font-size: 2.5rem;
+    font-size: 2rem;
     border-bottom: 1px solid white;
 }
 
@@ -185,12 +222,15 @@ p.project-work {
     font-size: 1rem;
 }
 
+
 #more-btn {
     cursor: pointer;
     color: #212529;
     border: 2px solid #212529;
     margin: 80px auto;
     width: 200px;
+    font-size:18px;
+    padding: 10px;
 }
 
 #more-btn:hover {
@@ -214,7 +254,7 @@ p.project-work {
 #contacts {
     background-color: #0d6efd;
     width: 100%;
-    height: 80vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -256,7 +296,7 @@ p.project-work {
 }
 
 #contact-links > a:hover {
-    bottom: 5px;
+    /* bottom: 5px; */
     color:#212529;
 }
 
@@ -284,10 +324,6 @@ footer > p {
         padding: 0;
     }
 
-    #welcome-section {
-        height: 80vh;
-    }
-
     #welcome-section > h1, #contacts > h1 {
         font-size: 2.5rem;
     }
@@ -300,9 +336,19 @@ footer > p {
         font-size: 1.7rem;
     }
 
+   #moreme-content {
+        font-size: 17px;
+    }
+
     #contact-links {
         display: flex;
         flex-direction: column;
+    }
+
+
+
+    .contact-details.below {
+        font-size: 18px;
     }
 
     footer {
